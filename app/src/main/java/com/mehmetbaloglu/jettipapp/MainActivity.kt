@@ -154,18 +154,22 @@ private fun EnterBill(valueState: MutableState<String>) {
         leadingIcon = {
             Icon(
                 imageVector = Icons.Rounded.AttachMoney,
-                contentDescription = "Money Icon"
+                contentDescription = "Money Icon",
+                tint = MaterialTheme.colorScheme.onBackground
             )
         },
         textStyle = TextStyle(
             fontSize = 18.sp,
             color = MaterialTheme.colorScheme.onBackground
         ),
+        singleLine = true,
         keyboardActions = KeyboardActions(
             onDone = {
                 focusManager.clearFocus()
             }
         )
+
+
     )
 }
 
